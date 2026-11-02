@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LoopEight — eight-bar loop expander desk</title>
+  <meta name="description" content="Stuck in an 8-bar loop? LoopEight expands your chords into a short full form with live instruments." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<main>
+  <p class="eyebrow">WorkinWithAI · live chairs</p>
+  <h1>LoopEight</h1>
+  <p class="lead">Eight-bar loop expander desk. Producers get stuck looping the same 8 bars. Session players write a short form around it — sparse intro, full verse, emphasized hook — so the idea has somewhere to go. Live FluidR3 piano, nylon, upright, kit. Your chords, your BPM, your key.</p>
+  <p class="status" id="status">Tap to start audio…</p>
+  <div id="tap-overlay" class="overlay">Tap anywhere to enable audio</div>
+
+  <p class="eyebrow">Your settings</p>
+  <div class="controls">
+    <label>BPM <input type="number" id="bpm" min="60" max="180" value="98" /></label>
+    <label>Key <select id="key"><option>A minor</option><option>C major</option><option>E major</option><option>D minor</option><option>G major</option></select></label>
+    <label>Bars <select id="bars"><option value="8">8</option><option value="16">16</option></select></label>
+  </div>
+  <div class="chords">
+    <input id="c1" placeholder="Am" value="Am" />
+    <input id="c2" placeholder="F" value="F" />
+    <input id="c3" placeholder="C" value="C" />
+    <input id="c4" placeholder="G" value="G" />
+  </div>
+
+  <p class="eyebrow">Recipe</p>
+  <div class="row" id="recipes"></div>
+
+  <p class="eyebrow">Form · intro 1–4 · verse 5–12 · hook 13–16 (or loop 1–8)</p>
+  <div class="bars" id="bars"></div>
+
+  <h2>Punch list</h2>
+  <pre id="punch"></pre>
+  <p class="note">iOS silent switch mutes Web Audio. Exports drop on the grid at sample 0.</p>
+</main>
+<div class="dock">
+  <button id="playA">A · Loop</button>
+  <button id="playB">B · Full form</button>
+  <button class="ghost" id="stop">Stop</button>
+  <button class="ghost" id="export">Export WAV</button>
+  <button class="ghost" id="exportMidi">Export MIDI</button>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
