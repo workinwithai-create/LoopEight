@@ -18,9 +18,9 @@ Or loop the 8-bar version.
 * A · Loop (8 bars)
 * B · Full form (16 bars)
 
-## Pricing recommendation
+## Pricing
 
-One-time $19 on Gumroad (or $9 add-on inside Forge Pass $24/mo). This is a focused desk, not a recurring studio. Sell next to RealGrooves-style indie tools on Gumroad + a pinned X demo. Best place: Gumroad for fast checkout and creator-friendly sales. Do not put it behind monthly unless bundled in Forge Pass.
+Free. (Future one-time $19 on Gumroad once license gate is connected.)
 
 ## Stack
 
@@ -30,4 +30,6 @@ Samples CDN pinned to SHA: `https://cdn.jsdelivr.net/gh/workinwithai-create/PreE
 
 ## Acceptance
 
-Follows WorkinWithAI Audio Engine Rules: lookahead scheduler on AudioContext clock, live state, OfflineAudioContext exports at sample 0, etc.
+Follows WorkinWithAI Audio Engine Rules: lookahead scheduler on AudioContext clock, live state, OfflineAudioContext exports at sample 0, exact length, tail fold, peak ≤ -1 dBFS, matching MIDI.
+
+Exports implemented. Mobile tap-to-start and visibility stop present. License gate pending for paid version.
